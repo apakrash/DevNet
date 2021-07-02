@@ -11,10 +11,11 @@ jobs:
           pwd
           ls
       - name: Checkout github repo
-        uses: actions/checkout@v2
+        uses: actions/checkout@v2 
+      - name: Post checkout List Files
         run: |
           pwd
-          ls -a            
+          ls -a                     
       - name: Simple JS Action
         id: greet
         uses: actions/hello-world-javascript-action@v1
