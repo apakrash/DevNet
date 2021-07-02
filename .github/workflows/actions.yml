@@ -6,8 +6,8 @@ jobs:
   run-github-command:
     runs-on: ubuntu-latest
     steps: github checkout
-      - name: Checout github repo
-        user: actions/checkout@v2
+      - name: Checkout github repo
+        uses: actions/checkout@v2
         run: |
           pwd
           ls -a         
