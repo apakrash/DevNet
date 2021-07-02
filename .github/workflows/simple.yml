@@ -10,5 +10,5 @@ jobs:
         run: echo "Welcome back, Mr. Reese"
       - name: multiline script
         run: |
-        df -h;
-        du -sh;
+          df -h
+          ls -a
