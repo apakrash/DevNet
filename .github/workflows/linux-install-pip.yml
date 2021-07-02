@@ -17,6 +17,7 @@ jobs:
         shell: python
       - name: Read image
         run: |
+          import cv2
           img = cv2.imread('a1.jpg')
           print(len(img))
         shell: python
