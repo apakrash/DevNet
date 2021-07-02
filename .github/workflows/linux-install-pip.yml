@@ -1,4 +1,4 @@
-name: OpenCV action
+name: OpenCV action - pip
 
 on: [push]
 
