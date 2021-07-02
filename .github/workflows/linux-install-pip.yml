@@ -15,6 +15,11 @@ jobs:
           (platform.processor())
           import cv2
         shell: python
+      - name: Read image
+        run: |
+          img = cv2.imread('a1.jpg')
+          print(len(img))
+        shell: python
   fetch-dropbox-folder:
     runs-on: ubuntu-latest
     steps:
@@ -27,9 +32,6 @@ jobs:
           rm drop1.zip
       - name: Check the folder
         run: ls -a
-      - name: Read image
-        run: |
-          img = cv2.imread('a1.jpg')
-          print(len(img))
-        shell: python
+
+
       
