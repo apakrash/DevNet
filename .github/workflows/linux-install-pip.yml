@@ -15,7 +15,7 @@ jobs:
           (platform.processor())
           import cv2
         shell: python
-  fetch-dropbox folder:
+  fetch-dropbox-folder:
     runs-on: ubuntu-latest
     steps:
       - name: Curl the folder
