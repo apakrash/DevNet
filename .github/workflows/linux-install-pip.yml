@@ -24,5 +24,12 @@ jobs:
           ls -a
           pwd
           unzip drop1.zip -x / -d .
+          rm drop1.zip
       - name: Check the folder
         run: ls -a
+      - name: Read image
+        run: |
+          img = cv2.imread('a1.jpg')
+          print(len(img))
+        shell: python
+      
