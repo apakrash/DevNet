@@ -10,8 +10,8 @@ jobs:
         run: echo "Welcome back, Mr. Reese"
       - name: multiline script
         run: |
-        df -h;
-        ls -a;
+          df -h;
+          ls -a;
       - name: python command
         run: |
           import platform
