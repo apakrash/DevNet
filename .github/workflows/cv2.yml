@@ -15,7 +15,7 @@ jobs:
       - name: Install OpenCV
         uses: florianblume/install-opencv-action@v1
         with:
-        cached: ${{ steps.cache-open-cv.outputs.cache-hit }}
+          cached: ${{ steps.cache-open-cv.outputs.cache-hit }}
       - name: Verify OpenCV
         run: |
           import platform
