@@ -23,3 +23,8 @@ jobs:
           who-to-greet: John
       - name: Log Greeting Time
         run: echo "${{ steps.greet.outputs.time }}"
+      - name: import cv2
+        id: cv
+        uses: Dovyski/setup-opencv-action@v1
+        with:
+          opencv-version: '4.0.0'
