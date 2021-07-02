@@ -17,6 +17,7 @@ jobs:
           import platform
           print
           (platform.processor())
+          import cv2
         shell: python
   run-windows-commands:
     runs-on: windows-latest
