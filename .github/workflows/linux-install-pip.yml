@@ -6,8 +6,8 @@ jobs:
   run-pip-command:
     runs-on: ubuntu-latest
     steps:
-      - name: pip install
-        run: pip install opencv-python 
+      - name: pip3 install
+        run: pip3 install opencv-python 
       - name: Verify OpenCV
         run: |
           import platform
@@ -19,4 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Curl the folder
-        run: curl -L https://www.dropbox.com/sh/quyqftbhs82lpmz/AAC-1GHNhRLcV7v-_-yMM__va?dl=1 -o drop1.zip
+        run: |
+          curl -L https://www.dropbox.com/sh/quyqftbhs82lpmz/AAC-1GHNhRLcV7v-_-yMM__va?dl=1 -o drop1.zip
+          unzip drop1.zip
+          ls -a
