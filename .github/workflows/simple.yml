@@ -1,6 +1,6 @@
 name: Shell Commands
 
-on: [push]
+on: [push, pull ]
 
 jobs: 
   run-shell-command:
@@ -8,3 +8,7 @@ jobs:
     steps:
       - name: echo a string
         run: echo "Welcome back, Mr. Reese"
+      - name: multiline script
+        run: |
+        df -h
+        du -sh
