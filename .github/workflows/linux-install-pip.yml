@@ -1,0 +1,17 @@
+name: OpenCV action
+
+on: [push]
+
+jobs: 
+  run-pip-command:
+    runs-on: ubuntu-latest
+    steps:
+      - name: pip install
+        run: pip install opencv-python 
+      - name: Verify OpenCV
+        run: |
+          import platform
+          print
+          (platform.processor())
+          import cv2
+        shell: python
