@@ -25,6 +25,6 @@ jobs:
       - name: Decompress
         uses: TonyBogdanov/zip@1.0
         with:
-            args: unzip -qq ./drop1.zip -d ./
+            args: unzip -qq drop1.zip 
       - name: Check the folder
         run: ls -a
