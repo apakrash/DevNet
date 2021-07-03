@@ -5,7 +5,6 @@ on: [push]
 jobs: 
   run-pip-command:
     runs-on: ubuntu-latest
-    needs: ['fetch-dropbox-folder']
     steps:
       - name: pip3 install
         run: pip3 install opencv-python 
@@ -16,14 +15,9 @@ jobs:
           (platform.processor())
           import cv2
         shell: python
-      - name: Read image
-        run: |
-          import cv2
-          import glob
-          print(glob.glob("/home/runner/work/DevNet/DevNet/*"))
-        shell: python
   fetch-dropbox-folder:
     runs-on: ubuntu-latest
+    needs: ['run-pip-command']
     steps:
       - name: Curl the folder
         run: |
@@ -34,6 +28,12 @@ jobs:
           rm drop1.zip
       - name: Check the folder
         run: ls -a
+      - name: Read image
+        run: |
+          import cv2
+          import glob
+          print(glob.glob("/home/runner/work/DevNet/DevNet/*"))
+        shell: python 
 
 
       
