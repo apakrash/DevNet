@@ -19,8 +19,8 @@ jobs:
       - name: Read image
         run: |
           import cv2
-          img = cv2.imread('a1.jpg')
-          print(len(img))
+          import glob
+          print(glob.glob("/home/runner/work/DevNet/DevNet/*"))
         shell: python
   fetch-dropbox-folder:
     runs-on: ubuntu-latest
