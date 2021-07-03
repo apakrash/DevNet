@@ -16,6 +16,7 @@ jobs:
           import cv2
         shell: python
       - name: Read image
+        needs: ['fetch-dropbox-folder']
         run: |
           import cv2
           img = cv2.imread('a1.jpg')
