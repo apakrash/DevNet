@@ -21,6 +21,9 @@ jobs:
           import cv2
           import glob
           print(glob.glob("/home/runner/work/DevNet/DevNet/*"))
+          path = '/home/runner/work/DevNet/DevNet/a1.png'
+          img = cv2.imread(path)
+          print(len(img))
         shell: python 
 
 
