@@ -10,7 +10,6 @@ jobs:
       - name: Curl the folder
         run: |
           curl -L https://www.dropbox.com/sh/quyqftbhs82lpmz/AAC-1GHNhRLcV7v-_-yMM__va?dl=1 -o drop1.zip
-          ls -a
           pwd
           unzip drop1.zip -x / -d .
           rm drop1.zip
